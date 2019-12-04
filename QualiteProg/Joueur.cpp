@@ -10,6 +10,10 @@ int Joueur::indice() const
 	return 1;
 }
 
+void Joueur::confrontationAvec(Objet *)
+{
+}
+
 Joueur::~Joueur()
 {
 }

@@ -4,7 +4,7 @@
 #include "Joueur.h"
 
 
-TEST_CASE("Le labyrinthe est correct") {
+TEST_CASE("La classe Terrein est correct") {
 	Terrein T(10, 20);
 	Joueur j;
 	
@@ -17,14 +17,21 @@ TEST_CASE("Le labyrinthe est correct") {
 		{
 			for (size_t j = 0; j < T.largeur(); j++)
 			{
-				CHECK(T.objetALindice(i, j) == 0);
+				CHECK(T.objetALindice(i, j) == nullptr);
 			}
 		}
 	}
 	SUBCASE("Le placement est correct") {
-		T.placerObjetAuxCoordonnes(j.indice(), 5, 6);
-		CHECK(T.objetALindice(5, 6) == 1);
+		T.placerObjetAuxCoordonnes(&j, 5, 6);
+		CHECK(T.objetALindice(5, 6) != nullptr);
 	}
+}
+
+TEST_CASE("La classe Robot et ceux qui héritent sont correct") {
+	Terrein T(10, 20);
+	Joueur j;
+	T.placerObjetAuxCoordonnes(&j, 5, 6);
+	CHECK(T.objetALindice(5, 6)->indice() == 1);
 }
 
 

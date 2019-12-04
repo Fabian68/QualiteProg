@@ -5,6 +5,8 @@ class Robot :
 {
 public:
 	Robot();
+	int indice()const;
+	void confrontationAvec(Objet*);
 	~Robot();
 };
 
