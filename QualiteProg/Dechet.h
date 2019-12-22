@@ -5,6 +5,9 @@ class Dechet :
 {
 public:
 	Dechet();
+	int indice()const;
+	void confrontationAvec(Objet*);
+	void estConfrontA(Objet*);
 	~Dechet();
 };
 

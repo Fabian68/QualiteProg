@@ -15,6 +15,10 @@ void Robot::confrontationAvec(Objet *)
 {
 }
 
+void Robot::estConfrontA(Objet*)
+{
+}
+
 
 
 

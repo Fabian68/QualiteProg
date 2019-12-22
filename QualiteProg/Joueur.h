@@ -6,6 +6,7 @@ class Joueur :
 public:
 	int indice()const;
 	void confrontationAvec(Objet*);
+	void estConfrontA(Objet*);
 	Joueur();
 	~Joueur();
 };

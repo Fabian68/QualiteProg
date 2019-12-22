@@ -14,6 +14,10 @@ void Joueur::confrontationAvec(Objet *)
 {
 }
 
+void Joueur::estConfrontA(Objet*)
+{
+}
+
 Joueur::~Joueur()
 {
 }

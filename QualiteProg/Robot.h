@@ -7,6 +7,7 @@ public:
 	Robot();
 	int indice()const;
 	void confrontationAvec(Objet*);
+	void estConfrontA(Objet*);
 	~Robot();
 };
 
