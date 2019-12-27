@@ -1,6 +1,6 @@
 #include "Objet.h"
 
-Objet::Objet()
+Objet::Objet() : c(10,10)
 {
 }
 

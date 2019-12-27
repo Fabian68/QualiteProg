@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
-class coordonnes;
+#include "Coordonnes.h"
+
+
 class Objet
 {
 public:
@@ -12,6 +14,6 @@ public:
 	virtual void afficher()const;
 	~Objet();
 private:
-	coordonnes c;
+	Coordonnes c;
 };
 
