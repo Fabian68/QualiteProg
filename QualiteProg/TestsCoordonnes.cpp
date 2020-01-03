@@ -1,5 +1,6 @@
 #include "doctest.h"
 #include "Coordonnes.h"
+#include "DeplacementBasique.h"
 
 TEST_CASE("La classe coordonnes est correct") {
 	Coordonnes C(3, 3);
@@ -40,5 +41,10 @@ TEST_CASE("La classe coordonnes est correct") {
 			REQUIRE_EQ(C.x(), 0);
 			REQUIRE_EQ(C.y(), 0);
 		}
+	}
+	SUBCASE("Le déplacement basique fonctionne sur un test") {
+		DeplacementBasique(C, DROITE);
+		REQUIRE_EQ(C.x(), 1);
+		REQUIRE_EQ(C.y(), 0);
 	}
 }
