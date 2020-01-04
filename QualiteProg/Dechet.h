@@ -5,10 +5,11 @@ class Dechet :
 {
 public:
 	Dechet();
+	Dechet(int x, int y);
 	int indice()const;
-	void confrontationAvec(Objet*);
-	void estConfrontA(Objet*);
-	void seDeplacer();
+	void confrontation(Terrein& T);
+	void estConfronter(Terrein& T);
+	void seDeplacer(Terrein& T);
 	~Dechet();
 };
 

@@ -6,9 +6,10 @@ class Joueur :
 {
 public:
 	int indice()const;
-	void confrontationAvec(Objet*);
-	void estConfrontA(Objet*);
-	void seDeplacer();
+	void confrontation(Terrein& T);
+	void estConfronter(Terrein& T);
+	void seDeplacer(Terrein& T);
+	Joueur(int x, int y);
 	Joueur();
 	~Joueur();
 };

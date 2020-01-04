@@ -4,6 +4,9 @@
 Coordonnes::Coordonnes(int LimiteX, int LimiteY) : _limiteX{LimiteX},_limiteY{LimiteY},_x{0},_y{0}
 {
 }
+Coordonnes::Coordonnes(int Dimension, int x,int y) : _limiteX{ Dimension }, _limiteY{ Dimension }, _x{ x }, _y{ y }
+{
+}
 
 int Coordonnes::x()const
 {

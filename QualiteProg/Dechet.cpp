@@ -6,20 +6,24 @@ Dechet::Dechet()
 {
 }
 
+Dechet::Dechet(int x, int y) : Objet(x,y)
+{
+}
+
 int Dechet::indice() const
 {
 	return 40;
 }
 
-void Dechet::confrontationAvec(Objet*)
+void Dechet::confrontation(Terrein& T)
 {
 }
 
-void Dechet::estConfrontA(Objet*)
+void Dechet::estConfronter(Terrein& T)
 {
 }
 
-void Dechet::seDeplacer()
+void Dechet::seDeplacer(Terrein& T)
 {
 	//ne fait rien 
 }

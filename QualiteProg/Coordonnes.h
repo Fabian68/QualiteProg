@@ -3,6 +3,7 @@ class Coordonnes
 {
 public:
 	Coordonnes(int LimiteX, int LimiteY);
+	Coordonnes(int Dimension, int x, int y);
 
 	int x()const;
 	int y()const;

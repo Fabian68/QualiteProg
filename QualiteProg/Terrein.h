@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 class Objet;
+const int Dimension = 20;
 class Terrein
 {
 public:

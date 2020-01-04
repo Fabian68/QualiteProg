@@ -10,18 +10,37 @@ int Joueur::indice() const
 	return 1;
 }
 
-void Joueur::confrontationAvec(Objet *)
+void Joueur::confrontation(Terrein& T)
 {
+	T.placerObjetAuxCoordonnes(nullptr, coord().x(), coord().y());
 }
 
-void Joueur::estConfrontA(Objet*)
+void Joueur::estConfronter(Terrein& T)
 {
+	confrontation(T);
 }
 
-void Joueur::seDeplacer()
+void Joueur::seDeplacer(Terrein& T)
 {
-	//determination direction
+	Coordonnes CoordTemporaires = coord();
+	Coordonnes CoordonnesFutur = coord();
+	//determination direction choisit arbitrairement pour le moment
+	int direction = 0;
+	DeplacementAvancer(CoordonnesFutur, direction);
+	if (T.objetALindice(CoordonnesFutur.x(), CoordonnesFutur.y()) != nullptr) {
+		confrontation(T);
+		T.objetALindice(CoordonnesFutur.x(), CoordonnesFutur.y())->estConfronter(T);
+	}
+	else {
+		setCoordonnes(CoordonnesFutur);
+		T.placerObjetAuxCoordonnes(this, coord().x(), coord().y());
+		T.placerObjetAuxCoordonnes(nullptr, CoordTemporaires.x(), CoordTemporaires.y());
+	}
 	//deplacement avancer
+}
+
+Joueur::Joueur(int x, int y) : Objet(x,y)
+{
 }
 
 Joueur::~Joueur()

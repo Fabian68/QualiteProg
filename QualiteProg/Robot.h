@@ -5,10 +5,11 @@ class Robot :
 {
 public:
 	Robot();
+	Robot(int x, int y);
 	int indice()const;
-	void confrontationAvec(Objet*);
-	void estConfrontA(Objet*);
-	void seDeplacer();
+	void confrontation(Terrein& T);
+	void estConfronter(Terrein& T);
+	void seDeplacer(Terrein& T);
 	~Robot();
 };
 
