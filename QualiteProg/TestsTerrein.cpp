@@ -34,4 +34,26 @@ TEST_CASE("La classe Robot et ceux qui héritent sont correct") {
 	CHECK(T.objetALindice(5, 6)->indice() == 1);
 }
 
+TEST_CASE("les déplacement dans le terrain sont correct") {
+	Terrein T(10, 20);
+	Joueur j1(0,0);
+	Joueur j2(3, 0);
+	T.placerObjet(&j1);
+	T.placerObjet(&j2);
+	CHECK(T.objetALindice(0, 0)!=nullptr);
+	CHECK(T.objetALindice(1, 0) == nullptr);
+	CHECK(T.objetALindice(3, 0) != nullptr);
+	j1.seDeplacer(T);
+	CHECK(T.objetALindice(0, 0) == nullptr);
+	CHECK(T.objetALindice(1, 0) != nullptr);
+	CHECK(j1.coord().x() == 1);
+	CHECK(j1.coord().y() == 0);
+	CHECK(T.objetALindice(3, 0) != nullptr);
+	j1.seDeplacer(T);
+	j1.seDeplacer(T);
+	CHECK(T.objetALindice(3, 0) == nullptr);
+	CHECK(T.objetALindice(2, 0) == nullptr);
+
+}
+
 

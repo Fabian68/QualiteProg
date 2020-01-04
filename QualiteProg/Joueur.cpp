@@ -25,7 +25,7 @@ void Joueur::seDeplacer(Terrein& T)
 	Coordonnes CoordTemporaires = coord();
 	Coordonnes CoordonnesFutur = coord();
 	//determination direction choisit arbitrairement pour le moment
-	int direction = 0;
+	int direction = DROITE;
 	DeplacementAvancer(CoordonnesFutur, direction);
 	if (T.objetALindice(CoordonnesFutur.x(), CoordonnesFutur.y()) != nullptr) {
 		confrontation(T);

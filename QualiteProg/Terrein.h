@@ -6,10 +6,12 @@ class Terrein
 {
 public:
 	Terrein(int longeur,int largeur);
+	Terrein();
 	int longeur() const;
 	int largeur() const;
     Objet* objetALindice(int x, int y) const;
 	void placerObjetAuxCoordonnes(Objet* Obj, int x, int y);
+	void placerObjet(Objet* obj);
 	~Terrein();
 private:
 	int _longeur;
