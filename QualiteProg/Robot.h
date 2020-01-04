@@ -8,6 +8,7 @@ public:
 	int indice()const;
 	void confrontationAvec(Objet*);
 	void estConfrontA(Objet*);
+	void seDeplacer();
 	~Robot();
 };
 

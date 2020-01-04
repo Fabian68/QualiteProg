@@ -19,6 +19,11 @@ void Dechet::estConfrontA(Objet*)
 {
 }
 
+void Dechet::seDeplacer()
+{
+	//ne fait rien 
+}
+
 
 Dechet::~Dechet()
 {

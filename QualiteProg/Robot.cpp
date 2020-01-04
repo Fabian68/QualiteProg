@@ -1,5 +1,5 @@
 #include "Robot.h"
-
+#include "DeplacementBasique.h"
 
 
 Robot::Robot()
@@ -17,6 +17,12 @@ void Robot::confrontationAvec(Objet *)
 
 void Robot::estConfrontA(Objet*)
 {
+}
+
+void Robot::seDeplacer()
+{
+	//determination direction
+	//deplacement basique
 }
 
 
