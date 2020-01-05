@@ -35,11 +35,11 @@ void Terrein::placerObjet(Objet* obj)
 {	
 	_terrein[obj->coord().x()][obj->coord().y()] = obj;
 }
-void Terrein::editer(char NomFichier)
+void Terrein::editerEnTxt(string& NomFichier)
 {
 	ofstream fichier;
-	fichier.open("NomFichier");
-	if (NomFichier == 0)
+	fichier.open(NomFichier.c_str());
+	if (fichier)
 	{
 		cout << "Impossible d'ouverture le fichier!" << endl;
 		system("pause");
@@ -47,14 +47,18 @@ void Terrein::editer(char NomFichier)
 	}
 	
 	fichier << _longeur;
+	fichier << "\n";
 	fichier << _largeur;
 
 	fichier.close();
 }
-
-void Terrein::charger(char NomFichier)
+void Terrein::editerEnFlux(string& NomFichier)
 {
-	ifstream fichier("Terrein.txt");
+	ofstream monFlux(NomFichier.c_str());
+}
+void Terrein::charger(string& NomFichier)
+{
+	ifstream fichier(NomFichier.c_str());
 	if (fichier.is_open()) {
 		char file = fichier.get();
 		while (fichier.good()) {
@@ -68,7 +72,7 @@ void Terrein::charger(char NomFichier)
 	return ;
 }
 
-void Terrein::sauvegarder(char NomFichier)
+void Terrein::sauvegarder(string& NomFichier)
 {
 
 }

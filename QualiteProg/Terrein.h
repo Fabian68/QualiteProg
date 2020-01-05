@@ -12,9 +12,10 @@ public:
     Objet* objetALindice(int x, int y) const;
 	void placerObjetAuxCoordonnes(Objet* Obj, int x, int y);
 	void placerObjet(Objet* obj);
-	void editer(char NomFichier);
-	void sauvegarder(char NomFichier);
-	void charger(char NomFichier);
+	void editerEnTxt(string& NomFichier);
+	void editerEnFlux(string& NomFichier);
+	void sauvegarder(string& NomFichier);
+	void charger(string& NomFichier);
 
 	~Terrein();
 private:
