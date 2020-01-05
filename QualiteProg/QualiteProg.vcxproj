@@ -134,6 +134,7 @@
     <ClCompile Include="Objet.cpp" />
     <ClCompile Include="Robot.cpp" />
     <ClCompile Include="Terrein.cpp" />
+    <ClCompile Include="TestFonctions.cpp" />
     <ClCompile Include="TestsCoordonnes.cpp" />
     <ClCompile Include="TestsTerrein.cpp" />
   </ItemGroup>

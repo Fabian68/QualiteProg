@@ -54,7 +54,7 @@ void Terrein::editerEnTxt(string& NomFichier)
 }
 void Terrein::editerEnFlux(string& NomFichier)
 {
-	NomFichier = ("");
+	NomFichier = (""); // le chemin d'acces à ce fichier
 	ofstream monFlux(NomFichier.c_str());
 	if (monFlux)
 	{
