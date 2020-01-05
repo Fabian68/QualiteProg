@@ -12,6 +12,10 @@ public:
     Objet* objetALindice(int x, int y) const;
 	void placerObjetAuxCoordonnes(Objet* Obj, int x, int y);
 	void placerObjet(Objet* obj);
+	void editer(char NomFichier);
+	void sauvegarder(char NomFichier);
+	void charger(char NomFichier);
+
 	~Terrein();
 private:
 	int _longeur;
