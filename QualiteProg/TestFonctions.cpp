@@ -3,8 +3,8 @@
 
 TEST_CASE("L'edition d'un terrain est correcte") {
 	int longuer = 20;
-	int larguer = 20;
-	Terrein terrein{ longuer , larguer };
+	int largeur = 20;
+	Terrein terrein{ longuer , largeur };
 
 	SUBCASE("L'edition dans un fichier texte est correcte ") {
 		terrein.editerEnTxt("Terrein.txt");
