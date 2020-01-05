@@ -38,7 +38,7 @@ void Terrein::placerObjet(Objet* obj)
 void Terrein::editer(char NomFichier)
 {
 	std::ifstream fichier;
-	fichier.open(NomFichier);
+	fichier.open("Terrein.txt");
 	if (!NomFichier)
 	{
 		cout << "Impossible d'ouverture le fichier!" << endl;
@@ -54,7 +54,18 @@ void Terrein::editer(char NomFichier)
 
 void Terrein::charger(char NomFichier)
 {
-
+	ifstream fichier("Terrein.txt");
+	if (fichier.is_open()) {
+		char file = fichier.get();
+		while (fichier.good()) {
+			cout << file;
+			file = fichier.get();
+		}
+	}
+	else {
+		cout << "Erreur d'ouverture ";
+	}
+	return ;
 }
 
 void Terrein::sauvegarder(char NomFichier)
