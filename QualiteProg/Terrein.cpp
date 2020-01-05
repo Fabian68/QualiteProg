@@ -1,6 +1,8 @@
 #include "Terrein.h"
 #include "Objet.h"
-
+#include<iostream>
+#include <fstream>
+using namespace std;
 
 Terrein::Terrein(int longeur, int largeur) : _longeur{longeur},_largeur{largeur}
 {
@@ -32,6 +34,34 @@ void Terrein::placerObjetAuxCoordonnes(Objet* Obj,int x, int y) {
 void Terrein::placerObjet(Objet* obj)
 {	
 	_terrein[obj->coord().x()][obj->coord().y()] = obj;
+}
+void Terrein::editer(char NomFichier)
+{
+	std::ifstream fichier;
+	fichier.open(NomFichier);
+	if (!NomFichier)
+	{
+		cout << "Impossible d'ouverture le fichier!" << endl;
+		system("pause");
+		exit(1);
+	}
+	int lg = _longeur;
+	int lr = _largeur;
+
+	fichier >> lg;
+	fichier >> lr;
+
+	fichier.close();
+}
+
+void Terrein::charger(char NomFichier)
+{
+
+}
+
+void Terrein::sauvegarder(char NomFichier)
+{
+
 }
 Terrein::~Terrein()
 {
