@@ -35,6 +35,8 @@ TEST_CASE("La classe Robot et ceux qui héritent sont correct") {
 }
 
 TEST_CASE("les déplacement dans le terrain sont correct") {
+	//test avant que le joueur puisse choisir ou se déplacer par défaut se déplace a droite a chaque appel
+
 	Terrein T(10, 20);
 	Joueur j1(0,0);
 	Joueur j2(3, 0);
@@ -51,9 +53,10 @@ TEST_CASE("les déplacement dans le terrain sont correct") {
 	CHECK(T.objetALindice(3, 0) != nullptr);
 	j1.seDeplacer(T);
 	j1.seDeplacer(T);
-	CHECK(T.objetALindice(3, 0) == nullptr);
-	CHECK(T.objetALindice(2, 0) == nullptr);
-
+	SUBCASE("Les deux entites se detruisent bien sur le labyrinthe") {
+		CHECK(T.objetALindice(3, 0) == nullptr);
+		CHECK(T.objetALindice(2, 0) == nullptr);
+	}
 }
 
 
