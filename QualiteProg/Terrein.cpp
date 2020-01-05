@@ -83,7 +83,13 @@ void Terrein::charger(string& NomFichier)
 
 void Terrein::sauvegarder(string& NomFichier)
 {
-
+	ofstream fichier(NomFichier.c_str());
+	if (!fichier) 
+	if(Dimension > 20){
+		cout << "sauvegarde impossible !";
+	}
+	fichier.write((char*)this, sizeof(*this));
+	fichier.close();
 }
 Terrein::~Terrein()
 {

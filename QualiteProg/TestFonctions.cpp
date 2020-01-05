@@ -16,6 +16,11 @@ TEST_CASE("L'edition d'un terrain est correcte") {
 		REQUIRE_EQ(terrein.longeur(), 20);
 		REQUIRE_EQ(terrein.largeur(), 20);
 	}
+	SUBCASE("Le sauvegarde d'un terrein est correct ") {
+		terrein.sauvegarder("Terrein.txt");
+		REQUIRE_EQ(terrein.longeur(), 20);
+		REQUIRE_EQ(terrein.largeur(), 20);
+	}
 	SUBCASE("Le chargement d'un terrein est correct ") {
 		terrein.charger("Terrein.txt");
 		REQUIRE_EQ(terrein.longeur(), 20);
