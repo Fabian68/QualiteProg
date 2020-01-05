@@ -39,7 +39,7 @@ void Terrein::editerEnTxt(string& NomFichier)
 {
 	ofstream fichier;
 	fichier.open(NomFichier.c_str());
-	if (fichier)
+	if (!fichier)
 	{
 		cout << "Impossible d'ouverture le fichier!" << endl;
 		system("pause");
@@ -54,7 +54,16 @@ void Terrein::editerEnTxt(string& NomFichier)
 }
 void Terrein::editerEnFlux(string& NomFichier)
 {
+	NomFichier = ("");
 	ofstream monFlux(NomFichier.c_str());
+	if (monFlux)
+	{
+		editerEnTxt(NomFichier);
+	}
+	else
+	{
+		cout << "Impossible d'ouverture le fichier!";
+	}
 }
 void Terrein::charger(string& NomFichier)
 {
