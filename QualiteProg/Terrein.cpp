@@ -45,11 +45,9 @@ void Terrein::editer(char NomFichier)
 		system("pause");
 		exit(1);
 	}
-	int lg = _longeur;
-	int lr = _largeur;
-
-	fichier >> lg;
-	fichier >> lr;
+	
+	fichier >> _longeur;
+	fichier >> _largeur;
 
 	fichier.close();
 }
