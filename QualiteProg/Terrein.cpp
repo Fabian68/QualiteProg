@@ -37,9 +37,9 @@ void Terrein::placerObjet(Objet* obj)
 }
 void Terrein::editer(char NomFichier)
 {
-	std::ofstream fichier;
+	ofstream fichier;
 	fichier.open("NomFichier");
-	if (!NomFichier)
+	if (NomFichier == 0)
 	{
 		cout << "Impossible d'ouverture le fichier!" << endl;
 		system("pause");
