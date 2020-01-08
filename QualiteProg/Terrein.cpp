@@ -31,6 +31,15 @@ Objet* Terrein::objetALindice(int x, int y)const {
 void Terrein::placerObjetAuxCoordonnes(Objet* Obj,int x, int y) {
 	_terrein[x][y] = Obj;
 }
+
+void Terrein::ajouterCoordonnes(int x,int y,Objet* Obj){
+        d_terrain[x][y]= Obj;
+}
+
+Objet* Terrein::recupererCoordonnes(int x,int y){
+        return d_terrain[x][y];
+} 
+
 void Terrein::placerObjet(Objet* obj)
 {	
 	_terrein[obj->coord().x()][obj->coord().y()] = obj;
@@ -54,7 +63,7 @@ void Terrein::editerEnTxt(string& NomFichier)
 }
 void Terrein::editerEnFlux(string& NomFichier)
 {
-	NomFichier = (""); // le chemin d'acces à ce fichier
+	NomFichier = (""); // le chemin d'acces Ã  ce fichier
 	ofstream monFlux(NomFichier.c_str());
 	if (monFlux)
 	{
