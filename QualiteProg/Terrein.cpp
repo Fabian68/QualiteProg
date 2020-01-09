@@ -37,10 +37,10 @@ void Terrein::ajouterCoordonnes(int x,int y,Objet* Obj){
 }
 
 Objet* Terrein::recupererCoordonnes(int x,int y){
-        return d_terrain[x][y];
+        return d_terrein[x][y];
 } 
 
-void Terrein::detruireCase(int i , int j){
+void Terrein::detruireCoordonnes(int i , int j){
   delete  d_terrein[i][j];
 }
 
