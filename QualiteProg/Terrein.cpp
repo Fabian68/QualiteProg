@@ -40,6 +40,10 @@ Objet* Terrein::recupererCoordonnes(int x,int y){
         return d_terrain[x][y];
 } 
 
+void Terrein::detruireCase(int i , int j){
+  delete  d_terrein[i][j];
+}
+
 void Terrein::placerObjet(Objet* obj)
 {	
 	_terrein[obj->coord().x()][obj->coord().y()] = obj;
