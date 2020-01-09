@@ -30,8 +30,8 @@ TEST_CASE("La classe Terrein est correct") {
     {
         int i =13;
         int j =4;
-        T.ajouteCase(i,j,Object);
-        T.detruireCase(i,j);
+        T.ajouteCordonnees(i,j,Object);
+        T.detruireCordonnes(i,j);
         REQUIRE_EQ(T.size(),156);
 
     }
