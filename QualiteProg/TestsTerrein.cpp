@@ -25,17 +25,27 @@ TEST_CASE("La classe Terrein est correct") {
 		T.placerObjetAuxCoordonnes(&j, 5, 6);
 		CHECK(T.objetALindice(5, 6) != nullptr);
 	}
+	
+	SUBCASE("detruire  une case se fait correctement  ")
+    {
+        int i =13;
+        int j =4;
+        T.ajouteCase(i,j,Object);
+        T.detruireCase(i,j);
+        REQUIRE_EQ(T.size(),156);
+
+    }
 }
 
-TEST_CASE("La classe Robot et ceux qui héritent sont correct") {
+TEST_CASE("La classe Robot et ceux qui hÃ©ritent sont correct") {
 	Terrein T(10, 20);
 	Joueur j;
 	T.placerObjetAuxCoordonnes(&j, 5, 6);
 	CHECK(T.objetALindice(5, 6)->indice() == 1);
 }
 
-TEST_CASE("les déplacement dans le terrain sont correct") {
-	//test avant que le joueur puisse choisir ou se déplacer par défaut se déplace a droite a chaque appel
+TEST_CASE("les dÃ©placement dans le terrain sont correct") {
+	//test avant que le joueur puisse choisir ou se dÃ©placer par dÃ©faut se dÃ©place a droite a chaque appel
 
 	Terrein T(10, 20);
 	Joueur j1(0,0);
